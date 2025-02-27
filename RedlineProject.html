@@ -26,6 +26,32 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.carousel-text h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.carousel-text p {
+    font-size: 18px;
+    margin-top: 10px;
+}
 
 .carousel-slide {
     min-width: 100%;
@@ -104,7 +130,7 @@
 .contact input, .contact textarea {
     margin: 10px 0;
     padding: 10px;
-    border: none;
+    border: 1px solid #ccc;
     width: 100%;
 }
 button {
@@ -115,10 +141,11 @@ button {
 }
 footer {
     text-align: center;
-    background: #222;
-    padding: 20px;
-    text-decoration-color: aliceblue;   
+    background: #181818;
+    padding: 20px; 
+    color: aliceblue;
 }
+
     </style>
 </head>
 <body>
@@ -179,12 +206,24 @@ footer {
         <div class="carousel-container">
             <div class="carousel-slide">
                 <img src="01.jpg" alt="Movie 1">
+                <div class="carousel-text">
+                    <h2>LATEST ONLINE MOVIES</h2>
+                    <p>Watch the best movies and TV shows online for free.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="02.jpg" alt="Movie 2">
+                <div class="carousel-text">
+                    <h2>LATEST ONLINE MOVIES</h2>
+                    <p>Watch the best movies and TV shows online for free.</p>
+                </div>
             </div>
             <div class="carousel-slide">
                 <img src="01.jpg" alt="Movie 3">
+                <div class="carousel-text">
+                    <h2>LATEST ONLINE MOVIES</h2>
+                    <p>Watch the best movies and TV shows online for free.</p>
+                </div>
             </div>
         </div>
         <button class="prev" onclick="prevSlide()">&#10094;</button>
@@ -235,27 +274,67 @@ function nextSlide() {
 // Auto-slide every 3 seconds
 setInterval(showSlides, 3000);
     </script>
-     <section class="hero">
-        <h1>LATEST ONLINE <span>MOVIES</span></h1>
-        <p>Watch the best movies and TV shows online for free.</p>
-    </section>
+   
 
-    <section class="movies">
-        <h2>FEATURED MOVIES</h2>
-        <div class="movie-list">
-            <div class="movie"></div>
-            <div class="movie"></div>
-            <div class="movie"></div>
-            <div class="movie"></div>
-            <div class="movie"></div>
-            <div class="movie"></div>
-        </div>
-    </section>
-
-    <section class="container my-5">
-        <h2 class="text-center text-white">FEATURED MOVIES</h2>
+    <section id="films" class="movies">
+        <h2 class="text-flex-start text-black">FEATURED MOVIES</h2>
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="a.jpg" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 1</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="b.jpg" class="card-img-top" alt="Movie 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 2</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="c.jpg" class="card-img-top" alt="Movie 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 3</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="d.jpg" class="card-img-top" alt="Movie 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 4</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="e.jpg" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 1</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="featured" class="container my-5">
+        <h2 class="text-flex-start text-black">FEATURED MOVIES</h2>
+        <div class="row">
+            <div class="col-md-2 mb-4">
                 <div class="card bg-dark text-white">
                     <img src="1.jpg" class="card-img-top" alt="Movie 1">
                     <div class="card-body">
@@ -265,7 +344,7 @@ setInterval(showSlides, 3000);
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-2 mb-4">
                 <div class="card bg-dark text-white">
                     <img src="2.jpg" class="card-img-top" alt="Movie 2">
                     <div class="card-body">
@@ -275,7 +354,7 @@ setInterval(showSlides, 3000);
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-2 mb-4">
                 <div class="card bg-dark text-white">
                     <img src="1.jpg" class="card-img-top" alt="Movie 3">
                     <div class="card-body">
@@ -285,7 +364,87 @@ setInterval(showSlides, 3000);
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="2.jpg" class="card-img-top" alt="Movie 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 4</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="1.jpg" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 1</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="2.jpg" class="card-img-top" alt="Movie 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 2</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="1.jpg" class="card-img-top" alt="Movie 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 3</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="2.jpg" class="card-img-top" alt="Movie 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 4</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="1.jpg" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 1</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="2.jpg" class="card-img-top" alt="Movie 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 2</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <div class="card bg-dark text-white">
+                    <img src="1.jpg" class="card-img-top" alt="Movie 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title 3</h5>
+                        <p class="card-text">Short description of the movie.</p>
+                        <a href="#" class="btn btn-danger">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
                 <div class="card bg-dark text-white">
                     <img src="2.jpg" class="card-img-top" alt="Movie 4">
                     <div class="card-body">
@@ -299,7 +458,7 @@ setInterval(showSlides, 3000);
     </section>
     
 
-    <section class="shop">
+    <section id="shop" class="shop">
         <h2>SHOP MOVIES</h2>
         <div class="movie-list">
             <div class="movie"></div>
@@ -307,7 +466,7 @@ setInterval(showSlides, 3000);
             <div class="movie"></div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>CONTACT US</h2>
         <form>
             <input type="text" placeholder="Your Name">
@@ -316,8 +475,8 @@ setInterval(showSlides, 3000);
             <button type="submit">Send Message</button>
         </form>
     </section>
-    <footer>
+    <footer >
         <p>© 2025 ALLEZCINE! All rights reserved.</p>
-    </footer>
+    </footer> 
 </body>
 </html>
