@@ -108,12 +108,6 @@
     height: 220px;
     background-color: grey;
 }
-.contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
 .card {
     border: none;
 }
@@ -123,25 +117,46 @@
     object-fit: cover;
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    border: #222;
+
+.contact{
+    background: white;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;  
+    align-items: center; 
+    margin: auto;   
+}
+.contact h2 {
+    margin-bottom: 15px;
+    border-left: 4px solid red;
+    padding-left: 10px;
+    text-align: left;
 }
 
-.contact input, .contact textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+.input-group input {
+    width: 48%;
+}
+input, textarea {
     width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 button {
     background: red;
     color: white;
-    border: none;
     padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: darkred;
 }
 footer {
     background-color: #111;
@@ -654,12 +669,16 @@ setInterval(showSlides, 3000);
     <section id="contact" class="contact">
         <h2>CONTACT US</h2>
         <form>
-            <input type="text" placeholder="Your First Name">
-            <input type="text" placeholder="Your Last Name">
-            <input type="email" placeholder="Your Email">
-            <input type="text" placeholder="Subject">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
+            <div class="input-group">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Subject" required>
+            </div>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
         </form>
     </section>
     <footer>
