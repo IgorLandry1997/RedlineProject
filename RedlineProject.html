@@ -140,11 +140,112 @@ button {
     padding: 10px;
 }
 footer {
+    background-color: #111;
+    color: white;
+    padding: 20px;
     text-align: center;
-    background: #181818;
-    padding: 20px; 
-    color: aliceblue;
 }
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe h3 {
+    color: red;
+}
+
+.subscribe input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    margin-right: 5px;
+}
+
+.subscribe button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-sections div {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-sections h4 {
+    margin-bottom: 10px;
+}
+
+.footer-sections ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-sections ul li {
+    margin-bottom: 5px;
+}
+
+.review-movies .tags span {
+    display: inline-block;
+    background: gray;
+    padding: 5px;
+    margin: 2px;
+}
+
+.latest-list .latest-item {
+    width: 80px;
+    height: 80px;
+    background: gray;
+    margin: 5px;
+}
+
+.brand-logo h2 {
+    font-size: 24px;
+}
+
+.red-text {
+    color: red;
+}
+
+.movie-thumbnails img {
+    width: 50px;
+    margin: 5px;
+}
+
+.social-connect .social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.back-to-top {
+    margin-top: 20px;
+}
+
+.back-to-top a {
+    background: red;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+}
+
 
     </style>
 </head>
@@ -546,14 +647,89 @@ setInterval(showSlides, 3000);
     <section id="contact" class="contact">
         <h2>CONTACT US</h2>
         <form>
-            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your First Name">
+            <input type="text" placeholder="Your Last Name">
             <input type="email" placeholder="Your Email">
             <textarea placeholder="Your Message"></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
-    <footer >
-        <p>© 2025 ALLEZCINE! All rights reserved.</p>
-    </footer> 
+    <footer>
+        <div class="footer-container">
+            <div class="subscribe">
+                <h3>SUBSCRIBE TO US</h3>
+                <input type="email" placeholder="Enter your email..." />
+                <button>SUBSCRIBE</button>
+            </div>
+    
+            <div class="footer-sections">
+                <div class="release">
+                    <h4>RELEASE</h4>
+                    <ul>
+                        <li>2016</li>
+                        <li>2015</li>
+                        <li>2014</li>
+                        <li>2013</li>
+                        <li>2012</li>
+                        <li>2011</li>
+                    </ul>
+                </div>
+    
+                <div class="movies">
+                    <h4>MOVIES</h4>
+                    <ul>
+                        <li>Adventure</li>
+                        <li>Comedy</li>
+                        <li>Fantasy</li>
+                        <li>Action</li>
+                        <li>Movies</li>
+                        <li>Horror</li>
+                    </ul>
+                </div>
+    
+                <div class="review-movies">
+                    <h4>REVIEW MOVIES</h4>
+                    <div class="tags">
+                        <span>Comedy</span>
+                        <span>Horror</span>
+                        <span>Historical</span>
+                        <span>Romantic</span>
+                        <span>Love</span>
+                        <span>Action</span>
+                        <span>Reviews</span>
+                    </div>
+                </div>
+    
+                <div class="latest-movies">
+                    <h4>LATEST MOVIES</h4>
+                    <div class="latest-list">
+                        <div class="latest-item"></div>
+                        <div class="latest-item"></div>
+                        <div class="latest-item"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="brand-logo">
+                <h2><span class="red-text">ALLEZ</span>CINE!</h2>
+                <div class="movie-thumbnails">
+                    <img src="1.jpg" alt="Movie" />
+                    <img src="1.jpg" alt="Movie" />
+                    <img src="1.jpg" alt="Movie" />
+                </div>
+            </div>
+    
+            <div class="social-connect">
+                <h3>CONNECT US</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>
