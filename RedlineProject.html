@@ -236,7 +236,16 @@ footer {
     font-size: 24px;
     text-align: center;
 }
+.shop h2 {
+    border-left: 5px solid red;
+    padding-left: 10px;
 
+}
+#featured h2{
+    border-left: 5px solid red;
+    padding-left: 10px;
+
+}
 .red-text {
     color: red;
 }
@@ -267,6 +276,19 @@ footer {
     display: inline-block;
     color: white;
 }
+.offcanvas-shop {
+            width: 300px !important;
+            position: absolute !important;
+            right: 0;
+            top: 0;
+            height: 500px;
+            width: 300px;
+            margin: auto;
+            border-left: 1px solid #ddd;
+        }
+        .shop-section {
+            position: relative;
+        }
 
 
     </style>
@@ -585,86 +607,60 @@ setInterval(showSlides, 3000);
         <h2> SHOP MOVIES</h2>
         <div class="row">
             <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="001.jpg" class="card-img-top" alt="Movie 1">
+                <div class="card" onclick="showMovieDetails('Movie 1', 'Description for Movie 1')">
+                    <img src="q.webp" class="card-img-top" alt="Movie 1">
                     <div class="card-body">
-                        <h5 class="card-title">Movie Title 1</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
+                        <h5 class="card-title">Pathan</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="002.jpg" class="card-img-top" alt="Movie 2">
+                <div class="card" onclick="showMovieDetails('Movie 1', 'Description for Movie 1')">
+                    <img src="n.jpg" class="card-img-top" alt="Movie 1">
                     <div class="card-body">
-                        <h5 class="card-title">Movie Title 2</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
+                        <h5 class="card-title">Back to the Future</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="003.jpg" class="card-img-top" alt="Movie 3">
+                <div class="card" onclick="showMovieDetails('Movie 1', 'Description for Movie 1')">
+                    <img src="o.webp" class="card-img-top" alt="Movie 1">
                     <div class="card-body">
-                        <h5 class="card-title">Movie Title 3</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
+                        <h5 class="card-title">Small Soldiers</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="004.jpg" class="card-img-top" alt="Movie 4">
+                <div class="card" onclick="showMovieDetails('Movie 1', 'Description for Movie 1')">
+                    <img src="p.jpeg" class="card-img-top" alt="Movie 1">
                     <div class="card-body">
-                        <h5 class="card-title">Movie Title 4</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="005.jpg" class="card-img-top" alt="Movie 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 1</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="006.jpg" class="card-img-top" alt="Movie 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 2</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="007.jpg" class="card-img-top" alt="Movie 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 3</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="008.webp" class="card-img-top" alt="Movie 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 4</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
+                        <h5 class="card-title">Small things like These</h5>
                     </div>
                 </div>
             </div>
         </div>
+     <!-- Movie Details Offcanvas -->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="movieDetails" aria-labelledby="movieDetailsLabel">
+        <div class="offcanvas-header">
+            <h5 id="movieTitle">Movie Title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p id="movieDescription">Movie description goes here.</p>
+        </div>
+    </div>
+
+    <script>
+        function showMovieDetails(title, description) {
+            document.getElementById('movieTitle').innerText = title;
+            document.getElementById('movieDescription').innerText = description;
+            let offcanvas = new bootstrap.Offcanvas(document.getElementById('movieDetails'));
+            offcanvas.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
     </section>
     <section id="contact" class="contact">
         <h2>CONTACT US</h2>
