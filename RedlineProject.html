@@ -501,134 +501,66 @@ setInterval(showSlides, 3000);
             </div>
     </section>
 
-    <section id="featured" class="container my-5">
-        <h2 class="text-flex-start text-black">FEATURED MOVIES</h2>
-        <div class="row">
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="1.jpg" class="card-img-top" alt="Movie 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 1</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="2.jpg" class="card-img-top" alt="Movie 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 2</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="f.jpg" class="card-img-top" alt="Movie 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 3</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="g.jpg" class="card-img-top" alt="Movie 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 4</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="h.webp" class="card-img-top" alt="Movie 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 1</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="i.jpg" class="card-img-top" alt="Movie 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 2</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="j.jpg" class="card-img-top" alt="Movie 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 3</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="k.jpg" class="card-img-top" alt="Movie 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 4</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="p.jpeg" class="card-img-top" alt="Movie 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 1</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="as.jpg" class="card-img-top" alt="Movie 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 2</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="ass.jpg" class="card-img-top" alt="Movie 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 3</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 mb-4">
-                <div class="card bg-dark text-white">
-                    <img src="n.jpg" class="card-img-top" alt="Movie 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Title 4</h5>
-                        <p class="card-text">Short description of the movie.</p>
-                        <a href="#" class="btn btn-danger">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <button>PLUS DE FILMS</button>
-        </div>
-    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const movies = [
+                { title: "Warcraft", category: "Action", image: "ass.jpg" },
+                { title: "Avengers", category: "Action", image: "a.jpg" },
+                { title: "Warcraft", category: "Action", image: "a1.jpg" },
+                { title: "Avengers", category: "Action", image: "a2.jpg" },
+                { title: "Godzilla", category: "Sci-Fi", image: "b.jpg" },
+                { title: "Avengers", category: "Action", image: "a4.jpg" },
+                { title: "Godzilla", category: "Sci-Fi", image: "a5.jpg" },
+                { title: "Avengers", category: "Action", image: "c.jpg" },
+                { title: "Godzilla", category: "Sci-Fi", image: "h.webp" },
+                { title: "Spider-Man", category: "Superhero", image: "008.webp" },
+                { title: "The Yellow", category: "Drama", image: "j.jpg" },
+                { title: "Riddick", category: "Sci-Fi", image: "g.jpg" }
+            ];
+            
+            const categories = ["All", "Action", "Drama", "Sci-Fi", "Superhero"];
+            const categoryContainer = document.getElementById("category-tabs");
+            const moviesContainer = document.getElementById("movies-container");
+            
+            function displayMovies(category) {
+                moviesContainer.innerHTML = "";
+                const filteredMovies = category === "All" ? movies : movies.filter(movie => movie.category === category);
+                
+                filteredMovies.forEach(movie => {
+                    const movieCard = `
+                        <div class="col-md-2">
+                            <div class="card bg-dark text-white mb-4">
+                                <img src="${movie.image}" class="card-img-top" alt="${movie.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${movie.title}</h5>
+                                    <p class="card-text">Short description of the movie.</p>
+                                    <a href="#" class="btn btn-danger">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>`;
+                    moviesContainer.innerHTML += movieCard;
+                });
+            }
+            
+            categories.forEach(category => {
+                const button = document.createElement("button");
+                button.className = "btn btn-outline-danger me-2";
+                button.textContent = category;
+                button.addEventListener("click", () => displayMovies(category));
+                categoryContainer.appendChild(button);
+            });
+            
+            displayMovies("All");
+        });
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h2 class="mb-4 border-start border-danger ps-3">FEATURED SERIES TV</h2>
+        <div id="category-tabs" class="mb-4"></div>
+        <div id="movies-container" class="row"></div>
+    </div>
+</body>
 
     <section id="featured" class="container my-5">
         <h2 class="text-flex-start text-black">FEATURED SERIES TV</h2>
