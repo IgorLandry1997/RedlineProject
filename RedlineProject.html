@@ -277,13 +277,14 @@ footer {
     color: white;
 }
 #shop {
-            width: 50%;
+            width: 100%;
             overflow-y: auto;
             padding: 20px;
             margin: 20px;
+            display: flex;
         }
         #movieDetailsFrame {
-            width: 50%;
+            width: 100%;
             border: 5px; color(srgb red green blue);
             height: 100vh;
             border-radius: 10px;
@@ -735,7 +736,7 @@ setInterval(showSlides, 3000);
             </div>
         </div>
         <!-- Right Section: Movie Details in Iframe -->
-    <iframe id="movieDetailsFrame" src="welcome.html" justify-content: end; width="500" height="300"></iframe>
+    <iframe id="movieDetailsFrame" src="welcome.html"width="500" height="300"></iframe>
     </div>
     <script>
         function showMovieDetails(page) {
